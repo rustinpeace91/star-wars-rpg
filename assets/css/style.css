@@ -1,0 +1,79 @@
+
+
+body{
+    background-image:url("../images/maxresdefault.jpg");
+    font-family: 'Arial', 'Helvetica Neue', Helvetica, sans-serif;
+    font-size:18px;
+}
+#container {
+    background:#d9e6fc;
+    padding:20px;
+    display:flex;
+    flex-wrap:wrap;
+}
+
+#main-content{
+
+}
+
+#start-characters, #enemies{
+    display:flex;
+    flex-wrap:wrap;
+}
+
+
+#instructions{
+
+}
+
+#fight-console {
+    width:500px;
+    height:300px;
+    background:gray;
+    color:yellow;
+    margin-top:20px;
+    margin-left:5px;
+    overflow:auto;
+    padding:5px;
+    line-height:.5em;
+}
+
+.jedi {
+    width:100px;
+    margin-left:5px;
+}
+
+.hidden{
+    display:none;
+}
+
+.partially-hidden{
+    display:hidden;
+}
+
+.health-bar{
+    position:relative;
+    bottom:20px;
+    background-color:red;
+    text-align:center;
+    width:100px;
+    margin-left:5px;
+
+}
+
+#luke-skywalker p.health-bar, #obi-wan p.health-bar {
+    background-color:green;
+}
+
+.splat {
+    width:30px;
+}
+
+.damage{
+    font-size:12px;
+    color:white;
+
+    bottom:40px;
+
+}
+

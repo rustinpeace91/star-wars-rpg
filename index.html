@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="assets/css/reset.css"/>
+
+    <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css"/>
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+</head>
+<body>
+
+
+        <div id = "container">
+
+        <div id = "main-content">
+                <h2>STAR WARS RPG  (D20 Edition!) </h2>
+            <p>Jedis</p> 
+            <div id = "start-characters">
+                <div id = "luke-skywalker" class = "character good" >
+                    <img class = "jedi" src = "assets/images/luke-skywalker.jpg">
+                    <p class = "health-bar">60</p>
+        
+                </div>
+                <div id = "obi-wan" class = "character good">
+                    <img class = "jedi" src = "assets/images/obi-wan.jpg">
+                    <p class = "health-bar" class ="id">80</p>
+                </div>
+
+                <div id = "darth-vader" class = "character">
+                    <img class = "jedi" src = "assets/images/darth-vader.jpg">
+                    <p class = "health-bar">100</p>
+
+                </div>
+                <div id = "the-emperor" class = "character">
+                        <img class = "jedi" src = "assets/images/the-emperor.jpg">
+                        <p class = "health-bar">120</p>
+                </div>
+
+            </div>
+                
+            <div id = "your-character">
+                <p>Your character: <span id = "hit" class = "hidden">took <span id = "damage" class = "hidden">0</span> damage </span><span id = "miss" class = "hidden">dodged out of the way</span></p>
+                <img class = "splat hidden" src = "assets/images/runesplat.png">
+            </div>
+            
+            <div id = "fight-section">
+                <p>Current Enemy: <span id = "hit" class = "hidden">took <span id = "damage" class = "hidden">0</span> damage </span><span id = "miss" class = "hidden">dodged out of the way</span></p>
+
+            </div>
+            <button id = "attack" class = "hidden">Attack</button>
+            <button id = "reset" class = "hidden">Reset Game</button>
+            <p>Your enemies:</p>
+            <div id = "enemies">
+
+
+            </div>
+
+            <div id = "instructions">
+                <h3>instructions</h3>
+                <p>select a character first</p>
+                <p>then select a character to attack</p>
+                <p>defeat all enemies to win the game</p>
+            </div>
+        </div>
+        <div id = "fight-console">
+
+        </div>
+
+    </div>
+    <script src="assets/javascript/game.js"></script>
+</body>
+</html>
