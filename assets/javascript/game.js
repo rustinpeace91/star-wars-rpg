@@ -297,8 +297,8 @@ function attack() {
                 console.log(currentEnemy.dom + " rolled " + enemyToHit + " and hit");
                 damage = currentEnemy.weaponDamage + currentEnemy.counterAttack;
                 console.log(currentEnemy.dom + " did " + damage + " damage");
-                $("#fight-console").prepend("<p style = 'color:red'>" + currentEnemy.dom + " rolled " + enemyToHit + " and hit</p>");
                 $("#fight-console").prepend("<p style = 'color:red'>" + currentEnemy.dom +  " did " + damage + " damage </p>");
+                $("#fight-console").prepend("<p style = 'color:red'>" + currentEnemy.dom + " rolled " + enemyToHit + " and hit</p>");
 
                 yourJedi.HP -= damage;
                 yourJedi.update();
