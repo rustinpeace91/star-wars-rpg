@@ -6,69 +6,97 @@
     <title>Star Wars RPG</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="assets/css/reset.css"/>
+    <!---BOOTSTRAP 4-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
     <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css"/>
-    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
 </head>
 <body>
 
 
-        <div id = "container">
+    <div id = "all-content" class = "container">
+        <div class = "row">
+            <div class = "col-md-6">
+                <div id = "main-content">
+                    <div class = "row">
+                        <div class = "col-md-12">
+                            <h1>STAR WARS RPG</h1>
+                            <p id = "pick-char" class = "char-label">Jedis(pick your character)</p> 
+                            <div id = "start-characters">
 
-        <div id = "main-content">
-                <h2>STAR WARS RPG  (D20 Edition!) </h2>
-            <p>Jedis</p> 
-            <div id = "start-characters">
-                <div id = "luke-skywalker" class = "character good" >
-                    <img class = "jedi" src = "assets/images/luke-skywalker.jpg">
-                    <p class = "health-bar">60</p>
-        
-                </div>
-                <div id = "obi-wan" class = "character good">
-                    <img class = "jedi" src = "assets/images/obi-wan.jpg">
-                    <p class = "health-bar" class ="id">80</p>
-                </div>
+                                <div id = "luke-skywalker" class = "character good" >
+                                    <img class = "jedi" src = "assets/images/luke-skywalker.jpg">
+                                    <p class = "health-bar">60</p>
+                        
+                                </div>
+                                <div id = "obi-wan" class = "character good">
+                                    <img class = "jedi" src = "assets/images/obi-wan.jpg">
+                                    <p class = "health-bar" class ="id">80</p>
+                                </div>
 
-                <div id = "darth-vader" class = "character">
-                    <img class = "jedi" src = "assets/images/darth-vader.jpg">
-                    <p class = "health-bar">100</p>
+                                <div id = "darth-vader" class = "character">
+                                    <img class = "jedi" src = "assets/images/darth-vader.jpg">
+                                    <p class = "health-bar">100</p>
 
-                </div>
-                <div id = "the-emperor" class = "character">
-                        <img class = "jedi" src = "assets/images/the-emperor.jpg">
-                        <p class = "health-bar">120</p>
-                </div>
+                                </div>
+                                <div id = "the-emperor" class = "character">
+                                        <img class = "jedi" src = "assets/images/the-emperor.jpg">
+                                        <p class = "health-bar">120</p>
+                                </div>
 
+                            </div>
+                        </div>
+                    </div>
+                    <div class = "row">
+                        <div class = "col-md-6">
+                            <div id = "your-character">
+                                <p class = "char-label">Your character: <span id = "hit" class = "hidden">took <span id = "damage" class = "hidden">0</span> damage </span><span id = "miss" class = "hidden">dodged out of the way</span></p>
+                                <img class = "splat hidden" src = "assets/images/runesplat.png">
+                            </div>
+                        </div>
+                        <div class = "col-md-6">
+                            <div id = "fight-section">
+                                <p class = "char-label">Current Enemy: <span id = "hit" class = "hidden">took <span id = "damage" class = "hidden">0</span> damage </span><span id = "miss" class = "hidden">dodged out of the way</span></p>
+
+                            </div>
+                        </div>
+
+                    </div>
+                        <button id = "attack" class = "hidden">Attack</button>
+                        <button id = "reset" class = "hidden">Reset Game</button>
+                        <p class = "char-label">Your enemies:</p>
+                        <div id = "enemies">
+
+
+                        </div>
+
+
+                    </div>
             </div>
-                
-            <div id = "your-character">
-                <p>Your character: <span id = "hit" class = "hidden">took <span id = "damage" class = "hidden">0</span> damage </span><span id = "miss" class = "hidden">dodged out of the way</span></p>
-                <img class = "splat hidden" src = "assets/images/runesplat.png">
-            </div>
-            
-            <div id = "fight-section">
-                <p>Current Enemy: <span id = "hit" class = "hidden">took <span id = "damage" class = "hidden">0</span> damage </span><span id = "miss" class = "hidden">dodged out of the way</span></p>
-
-            </div>
-            <button id = "attack" class = "hidden">Attack</button>
-            <button id = "reset" class = "hidden">Reset Game</button>
-            <p>Your enemies:</p>
-            <div id = "enemies">
+            <div class = "col-md-6">
+                    <div id = "fight-console-title">
+                            <p>Fight Console</p>
+                        </div>
+                    <div id = "fight-console">
 
 
+                    </div>
             </div>
 
-            <div id = "instructions">
-                <h3>instructions</h3>
-                <p>select a character first</p>
-                <p>then select a character to attack</p>
-                <p>defeat all enemies to win the game</p>
+        </div>
+        <div class = "row">
+            <div class "col-md-12">
+                <div id = "instructions">
+                        <h3>instructions:</h3>
+                        <p>select a character first</p>
+                        <p>then select a character to attack</p>
+                        <p>defeat all enemies to win the game</p>
+                </div>
             </div>
         </div>
-        <div id = "fight-console">
-
-        </div>
-
     </div>
     <script src="assets/javascript/game.js"></script>
 </body>

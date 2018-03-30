@@ -35,7 +35,7 @@ var obiWan = {
     weaponDamage: throwD8(),
     baseAttack: 1,
     //counter attack (does not increase)
-    counterAttack: 1,
+    counterAttack: 2,
     defeated:false,
     flavorText: function(){
         alert("you have selected obi wan. You are old and slow and don't really want to live anymore. Good luck");
@@ -72,8 +72,8 @@ var darthVader = {
     dom: "darth-vader",
     mainCharacter: false,
     enemy: false,
-    AC: 14,
-    HP:100,
+    AC: 11,
+    HP: 100,
     toHit: 2,
     baseAttack: 2,
     weaponDamage: throwD8(),
@@ -152,10 +152,10 @@ var theEmperor = {
     dom: "the-emperor",
     mainCharacter: false,
     enemy: false,
-    AC: 17,
+    AC: 14,
     HP:120,
     toHit: 2,
-    baseAttack: 2,
+    baseAttack: 4,
     weaponDamage: throwD8(),
     counterAttack: 2,
     defeated:false,
@@ -355,6 +355,7 @@ function resetGame(){
     jediChosen = false;
     yourJedi = undefined;
     currentEnemy = undefined;
+    $("#pick-char").show()
     turn = 0;
     for(i = 0; i<jediObj.length; i++){
         jediObj[i].reset();
@@ -372,6 +373,7 @@ $(document).ready(function(){
         //when a character is clicked. the first thing that is determined is if the jedi has been chosen yet
         if(jediChosen == false) {
             var element = $("#" + chosen).detach();
+            $("#pick-char").hide();
             $("#your-character").append(element);
             yourJedi = selectCharacter(chosen); 
             jediChosen = true;
